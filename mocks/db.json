@@ -1,0 +1,7 @@
+{
+  "spoilers_ranking": [
+    { "rank": 1, "spoiler": "Bruce Willis is dead", "movieId": 1, "movieName": "The Sixth Sense"},
+    { "rank": 2, "spoiler": "Brad Pitt is Edward Norton's alter ego", "movieId": 2, "movieName": "Fight Club"},
+    { "rank": 3, "spoiler": "Leonardo di Caprio is crazy", "movieId": 3, "movieName": "Shutter Island"}
+  ]
+}
