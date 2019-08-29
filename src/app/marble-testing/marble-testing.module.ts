@@ -1,16 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { TopSpoilersComponent } from './top-spoilers/top-spoilers.component';
-import { MatSlideToggle, MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { RandomSpoilerComponent } from './top-spoilers/random-spoiler.component';
 
 @NgModule({
-  declarations: [TopSpoilersComponent],
+  declarations: [RandomSpoilerComponent],
   imports: [
     CommonModule,
     HttpClientModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSnackBarModule
   ],
-  exports: [TopSpoilersComponent]
+  exports: [RandomSpoilerComponent]
 })
 export class MarbleTestingModule { }

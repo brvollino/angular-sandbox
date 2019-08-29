@@ -1,0 +1,13 @@
+<div class="d-flex flex-column flex align-items-center">
+    <div class="align-items-end">
+      Display movie name
+      <mat-slide-toggle [checked]="displayMovies" (change)="exposeMovies()"></mat-slide-toggle>
+    </div>
+    <div class="card m-5">
+      <div *ngIf="spoiler" class="card-body">
+        <h3>#{{spoiler.id}} {{ displayMovies ? spoiler.movieName : hideString(spoiler.movieName) }}</h3>
+        {{spoiler.spoiler}}
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="nextSpoiler()">Get me a spoiler please</button>
+</div>

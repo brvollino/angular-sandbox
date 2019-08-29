@@ -1,6 +1,5 @@
 export interface Spoiler {
-  movieId: number;
+  id: number;
   movieName?: string;
   spoiler: string;
-  rank?: number;
 }
