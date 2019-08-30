@@ -10,11 +10,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./random-spoiler.component.scss']
 })
 export class RandomSpoilerComponent {
-  spoiler: Spoiler;
+  spoiler: Spoiler; // property displayed by the view
   displayMovies = false;
 
   constructor(private spoilerService: SpoilerService, private snackBar: MatSnackBar) { }
 
+  /* Gets a random spoiler observable from the spoilerService.
+     If it emits a new spoiler, assign it to the 'spoiler' property.
+     If it emits an error, display an error message. */
   nextSpoiler() {
     this.spoilerService.getRandomSpoiler().pipe(take(1)).subscribe({
       next: (newSpoiler) => {

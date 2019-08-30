@@ -8,11 +8,12 @@ import { Spoiler } from './spoiler.model';
   providedIn: 'root'
 })
 export class SpoilerService {
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
+  // Requests a list of spoilers from a REST service map it to return a single random spoiler
   public getRandomSpoiler(): Observable<Spoiler> {
     const uri = 'http://localhost:3000/spoilers/';
-    return this.http.get<Spoiler[]>(uri) // [#1, #2, #3]
+    return this.httpClient.get<Spoiler[]>(uri) // [#1, #2, #3]
       .pipe(
         map(spoilers => spoilers[this.randomIndex(spoilers)]) // #X
       );
